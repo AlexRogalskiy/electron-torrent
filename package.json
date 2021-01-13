@@ -1,0 +1,67 @@
+{
+  "name": "electorrent",
+  "version": "2.7.2",
+  "description": "A thin client for your torrenting needs",
+  "main": "app/app.js",
+  "license": "GPL-3.0",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build",
+    "postinstall": "bower --allow-root install && gulp install && electron-builder install-app-deps",
+    "pack": "build --dir",
+    "predist": "gulp build",
+    "dist": "electron-builder",
+    "prerelease": "gulp build",
+    "release": "electron-builder",
+    "test": "mocha --bail tests/test.js"
+  },
+  "keywords": [
+    "utorrent"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tympanix/Electorrent.git"
+  },
+  "author": "tympanix",
+  "dependencies": {
+    "electron-regedit": "^2.0.0",
+    "less": "^2.7.3",
+    "q": "^1.5.1",
+    "winreg": "^1.2.2"
+  },
+  "devDependencies": {
+    "@wdio/sync": "^6.3.6",
+    "bower": "^1.8.8",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "dockerode": "^3.2.1",
+    "electron": "^9.3.1",
+    "electron-builder": "^22.4.1",
+    "electron-builder-squirrel-windows": "^22.4.1",
+    "electron-connect": "^0.6.3",
+    "electron-is": "^2.4.1",
+    "electron-squirrel-startup": "^1.0.0",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-iconfont": "^10.0.3",
+    "gulp-if": "^2.0.2",
+    "gulp-less": "^4.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-run": "^1.7.1",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-useref": "^3.1.6",
+    "hoek": "^5.0.4",
+    "lazypipe": "^1.0.2",
+    "merge-stream": "^1.0.1",
+    "mocha": "^8.1.0",
+    "request": "^2.88.2",
+    "rollup": "^2.2.0",
+    "run-sequence": "^1.2.2",
+    "semver": "^5.7.1",
+    "spectron": "^11.1.0",
+    "through2": "^2.0.5",
+    "winston": "^2.4.4",
+    "yargs": "^4.8.1"
+  }
+}
